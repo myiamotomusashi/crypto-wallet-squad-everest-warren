@@ -45,8 +45,10 @@ class WalletPage extends ConsumerWidget {
                   IconButton(
                     onPressed: () => ref.read(visibilityProvider.state).state =
                         !ref.read(visibilityProvider.state).state,
-                    icon: const Icon(
-                      Icons.remove_red_eye,
+                    icon: Icon(
+                      ref.read(visibilityProvider)
+                          ? Icons.visibility_rounded
+                          : Icons.visibility_off_rounded,
                       size: 32,
                     ),
                   ),
