@@ -11,9 +11,9 @@ void main() {
       ),
     );
 
-    expect(find.byIcon(Icons.remove_red_eye), findsOneWidget);
+    expect(find.byKey(const Key('ShowIconButton')), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.remove_red_eye));
+    await tester.tap(find.byKey(const Key('ShowIconButton')));
     await tester.pump();
 
     expect(find.text('*********'), findsWidgets);
