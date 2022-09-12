@@ -1,6 +1,7 @@
 import 'package:cryptowallet/app/presenter/riverpod/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 
 class WalletPage extends ConsumerWidget {
   const WalletPage({Key? key}) : super(key: key);
@@ -57,17 +58,6 @@ class WalletPage extends ConsumerWidget {
               ),
               Row(
                 children: [
-                  const Text(
-                    'R\$ ',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 32,
-                      color: Color.fromRGBO(47, 46, 50, 1),
-                    ),
-                  ),
                   Visibility(
                     replacement: const Text(
                       '*********',
@@ -82,7 +72,9 @@ class WalletPage extends ConsumerWidget {
                     ),
                     visible: ref.watch(visibilityProvider.state).state,
                     child: Text(
-                      cryptoWalletAmount.toString(),
+                      NumberFormat.simpleCurrency(
+                              locale: 'pt-BR', decimalDigits: 2)
+                          .format(cryptoWalletAmount),
                       textAlign: TextAlign.left,
                       style: const TextStyle(
                         fontFamily: 'Montserrat',
@@ -138,16 +130,6 @@ class WalletPage extends ConsumerWidget {
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Text(
-                                  'R\$ ',
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18,
-                                    color: Color.fromRGBO(47, 46, 50, 1),
-                                  ),
-                                ),
                                 Visibility(
                                   replacement: const Text(
                                     '*********',
@@ -155,7 +137,9 @@ class WalletPage extends ConsumerWidget {
                                   visible:
                                       ref.watch(visibilityProvider.state).state,
                                   child: Text(
-                                    btcRealAmount.toString(),
+                                    NumberFormat.simpleCurrency(
+                                            locale: 'pt-BR', decimalDigits: 2)
+                                        .format(btcRealAmount),
                                     style: const TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontStyle: FontStyle.normal,
@@ -221,16 +205,6 @@ class WalletPage extends ConsumerWidget {
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Text(
-                                  'R\$ ',
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18,
-                                    color: Color.fromRGBO(47, 46, 50, 1),
-                                  ),
-                                ),
                                 Visibility(
                                   replacement: const Text(
                                     '*********',
@@ -238,7 +212,9 @@ class WalletPage extends ConsumerWidget {
                                   visible:
                                       ref.watch(visibilityProvider.state).state,
                                   child: Text(
-                                    ethRealAmount.toString(),
+                                    NumberFormat.simpleCurrency(
+                                            locale: 'pt-BR', decimalDigits: 2)
+                                        .format(ethRealAmount),
                                     style: const TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontStyle: FontStyle.normal,
@@ -304,16 +280,6 @@ class WalletPage extends ConsumerWidget {
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Text(
-                                  'R\$ ',
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 18,
-                                    color: Color.fromRGBO(47, 46, 50, 1),
-                                  ),
-                                ),
                                 Visibility(
                                   replacement: const Text(
                                     '*********',
@@ -321,7 +287,9 @@ class WalletPage extends ConsumerWidget {
                                   visible:
                                       ref.watch(visibilityProvider.state).state,
                                   child: Text(
-                                    ltcRealAmount.toString(),
+                                    NumberFormat.simpleCurrency(
+                                            locale: 'pt-BR', decimalDigits: 2)
+                                        .format(ltcRealAmount),
                                     style: const TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontStyle: FontStyle.normal,
