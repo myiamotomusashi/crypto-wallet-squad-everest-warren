@@ -1,3 +1,4 @@
+import 'package:cryptowallet/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/text_styles.dart';
@@ -12,12 +13,12 @@ class TitleWalletPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
+      children: [
         Text(
-          'Ativos em Cripto',
+          L10n.of(context)!.titleWalletPage,
           style: titleTextStyle,
         ),
-        HideShowButton(),
+        const HideShowButton(),
       ],
     );
   }

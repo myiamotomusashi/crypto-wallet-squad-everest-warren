@@ -1,3 +1,4 @@
+import 'package:cryptowallet/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/text_styles.dart';
@@ -10,9 +11,9 @@ class SubtitleWalletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
+      children: [
         Text(
-          'Valor total de criptomoedas.',
+          L10n.of(context)!.subtitleWalletPage,
           textAlign: TextAlign.left,
           style: cryptoSubtitleStyle,
         ),

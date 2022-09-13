@@ -1,3 +1,4 @@
+import 'package:cryptowallet/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CryptoBottomNavbar extends StatelessWidget {
@@ -11,16 +12,16 @@ class CryptoBottomNavbar extends StatelessWidget {
       currentIndex: 0,
       elevation: 10,
       selectedItemColor: const Color.fromRGBO(224, 43, 87, 1),
-      items: const [
+      items: [
         BottomNavigationBarItem(
-          icon: ImageIcon(
+          icon: const ImageIcon(
             AssetImage('assets/icons/warrenIcon.png'),
           ),
-          label: 'Porfólio',
+          label: L10n.of(context)!.firstIconTextBottomNavBar,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.currency_exchange),
-          label: 'Movimentações',
+          icon: const Icon(Icons.currency_exchange),
+          label: L10n.of(context)!.secondIconTextBottomNavBar,
         ),
       ],
     );
