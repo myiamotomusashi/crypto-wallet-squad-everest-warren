@@ -1,8 +1,8 @@
-import 'package:cryptowallet/app/presenter/ui/wallet/wallet_page.dart';
+import 'package:cryptowallet/crypto_wallet/presenter/ui/wallet/wallet_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:cryptowallet/app/core/routes/app_routes.dart';
+import 'package:cryptowallet/crypto_wallet/core/routes/app_routes.dart';
 
 void main() => runApp(
       const ProviderScope(
