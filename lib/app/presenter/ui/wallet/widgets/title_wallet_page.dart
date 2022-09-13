@@ -15,7 +15,7 @@ class TitleWalletPage extends StatelessWidget {
       children: const [
         Text(
           'Ativos em Cripto',
-          style: TitleTextStyle,
+          style: titleTextStyle,
         ),
         HideShowButton(),
       ],
