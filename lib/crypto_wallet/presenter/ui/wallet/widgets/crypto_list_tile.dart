@@ -20,6 +20,7 @@ class CryptoListTile extends ConsumerWidget {
   final double cryptoRealAmount;
   final double cryptoAmount;
   final String cryptoIcon;
+
   final Text title;
   final Text subtitle;
   final String coinAbbreviation;
@@ -85,7 +86,7 @@ class CryptoListTile extends ConsumerWidget {
               ),
               visible: ref.watch(visibilityProvider.state).state,
               child: Text(
-                "$cryptoAmount BTC",
+                cryptoAmount.toString() + coinAbbreviation,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 15,
