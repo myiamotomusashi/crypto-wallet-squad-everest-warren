@@ -1,3 +1,4 @@
+import 'package:cryptowallet/crypto_wallet/presenter/ui/transactions/transactions_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -51,7 +52,14 @@ class WalletPage extends ConsumerWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const CryptoBottomNavbar(),
+      bottomNavigationBar: CryptoBottomNavbar(
+        onTap: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .pushReplacementNamed(TransactionsPage.transactionsRoute);
+        },
+        currentIndex: 0,
+      ),
     );
   }
 }

@@ -4,19 +4,25 @@ import 'package:flutter/material.dart';
 class CryptoBottomNavbar extends StatelessWidget {
   const CryptoBottomNavbar({
     Key? key,
+    required this.onTap,
+    required this.onPressed,
+    required this.currentIndex,
   }) : super(key: key);
+
+  final int currentIndex;
+  final Function()? onTap;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    int selectedIndex = 0;
     return BottomNavigationBar(
-      currentIndex: selectedIndex,
+      currentIndex: currentIndex,
       elevation: 10,
       selectedItemColor: const Color.fromRGBO(224, 43, 87, 1),
       items: [
         BottomNavigationBarItem(
           icon: InkWell(
-            onTap: () {},
+            onTap: onTap,
             child: const ImageIcon(
               AssetImage('assets/icons/warrenIcon.png'),
             ),
@@ -25,7 +31,7 @@ class CryptoBottomNavbar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: IconButton(
-            onPressed: () {},
+            onPressed: onPressed,
             icon: const Icon(Icons.currency_exchange),
           ),
           label: L10n.of(context)!.secondIconTextBottomNavBar,
