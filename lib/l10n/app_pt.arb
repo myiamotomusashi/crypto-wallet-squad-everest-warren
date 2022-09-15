@@ -1,0 +1,33 @@
+
+{
+    "language": "Português Brasil",
+    "@language":
+    {
+    "description": "Linguagem padrão"
+    }, 
+
+    "titleWalletPage": "Ativos em Cripto",
+    "@titleWalletPage":
+    {
+    "description":"Título do arquivo wallet_page.dart"
+    },
+
+    "subtitleWalletPage": "Valor total de criptomoedas.",
+    "@subtitleWalletPage":
+    {
+    "description": "Subtitulo do arquivo wallet_page.dart"
+    },
+
+    "firstIconTextBottomNavBar": "Portfólio",
+    "@firstIconTextBottomNavBar":
+    {
+    "description":"Texto do primeiro icone da barra de navegação inferior do arquivo wallet_page.dart"
+    },
+
+    "secondIconTextBottomNavBar": "Movimentações",
+    "@secondIconTextBottomNavBar":
+    {
+    "description":"Texto do primeiro icone da barra de navegação inferior do arquivo wallet_page.dart"
+    }
+}
+
