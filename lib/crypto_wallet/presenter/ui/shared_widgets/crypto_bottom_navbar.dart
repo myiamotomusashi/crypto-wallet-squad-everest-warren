@@ -8,19 +8,26 @@ class CryptoBottomNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int selectedIndex = 0;
     return BottomNavigationBar(
-      currentIndex: 0,
+      currentIndex: selectedIndex,
       elevation: 10,
       selectedItemColor: const Color.fromRGBO(224, 43, 87, 1),
       items: [
         BottomNavigationBarItem(
-          icon: const ImageIcon(
-            AssetImage('assets/icons/warrenIcon.png'),
+          icon: InkWell(
+            onTap: () {},
+            child: const ImageIcon(
+              AssetImage('assets/icons/warrenIcon.png'),
+            ),
           ),
           label: L10n.of(context)!.firstIconTextBottomNavBar,
         ),
         BottomNavigationBarItem(
-          icon: const Icon(Icons.currency_exchange),
+          icon: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.currency_exchange),
+          ),
           label: L10n.of(context)!.secondIconTextBottomNavBar,
         ),
       ],
