@@ -51,9 +51,7 @@ class WalletPage extends ConsumerWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const CryptoBottomNavbar(
-        currentIndex: 0,
-      ),
+      bottomNavigationBar: const CryptoBottomNavbar(),
     );
   }
 }

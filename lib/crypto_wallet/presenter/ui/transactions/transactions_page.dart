@@ -30,9 +30,7 @@ class TransactionsPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const CryptoBottomNavbar(
-        currentIndex: 1,
-      ),
+      bottomNavigationBar: const CryptoBottomNavbar(),
     );
   }
 }
