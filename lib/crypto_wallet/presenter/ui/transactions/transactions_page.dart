@@ -16,6 +16,7 @@ class TransactionsPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                key: const Key('cleytin'),
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,

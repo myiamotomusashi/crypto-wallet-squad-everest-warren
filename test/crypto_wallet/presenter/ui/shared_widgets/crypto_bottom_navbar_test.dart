@@ -15,6 +15,7 @@ void main() {
     await tester.tap(find.byKey(const Key('secondIconBottomNavBar')));
     await tester.pumpAndSettle();
     expect(find.byType(TransactionsPage), findsOneWidget);
+    expect(find.byKey(const Key('cleytin')), findsOneWidget);
 
     await tester.tap(find.byKey(const Key('firstIconBottomNavBar')));
     await tester.pumpAndSettle();
