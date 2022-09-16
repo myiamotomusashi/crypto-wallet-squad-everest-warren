@@ -1,17 +1,16 @@
 import 'package:cryptowallet/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
+import '../transactions/transactions_page.dart';
+import '../wallet/wallet_page.dart';
+
 class CryptoBottomNavbar extends StatelessWidget {
   const CryptoBottomNavbar({
     Key? key,
-    required this.onTap,
-    required this.onPressed,
     required this.currentIndex,
   }) : super(key: key);
 
   final int currentIndex;
-  final Function()? onTap;
-  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +23,26 @@ class CryptoBottomNavbar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: InkWell(
             key: const Key('firstIconBottomNavBar'),
-            onTap: onTap,
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(WalletPage.walletRoute);
+            },
             child: const ImageIcon(
               AssetImage('assets/icons/warrenIcon.png'),
             ),
           ),
-          label: L10n.of(context)!.firstIconTextBottomNavBar,
+          label: L10n.of(context)?.firstIconTextBottomNavBar,
         ),
         BottomNavigationBarItem(
           icon: IconButton(
             key: const Key('secondIconBottomNavBar'),
-            onPressed: onPressed,
+            onPressed: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(TransactionsPage.transactionsRoute);
+            },
             icon: const Icon(Icons.currency_exchange),
           ),
-          label: L10n.of(context)!.secondIconTextBottomNavBar,
+          label: L10n.of(context)?.secondIconTextBottomNavBar,
         ),
       ],
     );

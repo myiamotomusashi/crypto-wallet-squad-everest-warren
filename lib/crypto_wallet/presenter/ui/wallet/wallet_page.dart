@@ -1,4 +1,3 @@
-import 'package:cryptowallet/crypto_wallet/presenter/ui/transactions/transactions_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -52,12 +51,7 @@ class WalletPage extends ConsumerWidget {
           ),
         ),
       ),
-      bottomNavigationBar: CryptoBottomNavbar(
-        onTap: () {},
-        onPressed: () {
-          Navigator.of(context)
-              .pushReplacementNamed(TransactionsPage.transactionsRoute);
-        },
+      bottomNavigationBar: const CryptoBottomNavbar(
         currentIndex: 0,
       ),
     );

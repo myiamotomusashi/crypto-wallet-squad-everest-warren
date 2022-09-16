@@ -1,4 +1,3 @@
-import 'package:cryptowallet/crypto_wallet/presenter/ui/wallet/wallet_page.dart';
 import 'package:flutter/material.dart';
 
 import '../shared_widgets/crypto_bottom_navbar.dart';
@@ -30,11 +29,7 @@ class TransactionsPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: CryptoBottomNavbar(
-        onTap: () {
-          Navigator.of(context).pushReplacementNamed(WalletPage.walletRoute);
-        },
-        onPressed: () {},
+      bottomNavigationBar: const CryptoBottomNavbar(
         currentIndex: 1,
       ),
     );
