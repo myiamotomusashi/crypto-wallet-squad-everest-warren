@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../core/utils/arguments.dart';
 import '../../../../core/utils/text_styles.dart';
 import '../../../../domain/entities/crypto_entity.dart';
 import '../../../riverpod/providers.dart';
+import '../../crypto_details/crypto_details_page.dart';
 
 class CryptoListTile extends ConsumerWidget {
   CryptoEntity cryptoModel;
@@ -20,8 +22,8 @@ class CryptoListTile extends ConsumerWidget {
       elevation: 10,
       child: ListTile(
         onTap: () {
-          // Navigator.of(context).pushNamed(CryptoDetailsPage.cryptoDetailsRoute,
-          //     arguments: Arguments(cryptoEntity: cryptoModel));
+          Navigator.of(context).pushNamed(CryptoDetailsPage.cryptoDetailsRoute,
+              arguments: Arguments(cryptoEntity: cryptoModel));
         },
         leading: CircleAvatar(
           child: Container(
