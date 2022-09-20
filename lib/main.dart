@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
-        Locale('pt', 'BR'), // Portuguese, country code is BR
+        Locale('pt', 'BR'),
         Locale('en', 'US'),
       ],
       debugShowCheckedModeBanner: false,
