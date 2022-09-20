@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../domain/entities/crypto_entity.dart';
+import '../../../domain/repositories/crypto_repository.dart';
 import '../shared_widgets/crypto_bottom_navbar.dart';
 
 import 'widgets/crypto_list_view.dart';
@@ -15,9 +17,8 @@ class WalletPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    double btcAmount = 0.65;
-    double ethAmount = 0.94;
-    double ltcAmount = 0.82;
+    CryptoRepository cryptoRepository = CryptoRepository();
+    List<CryptoEntity> cryptoList = cryptoRepository.getAllCryptos();
 
     double btcRealAmount = 6557.01;
     double ethRealAmount = 7996.01;
@@ -39,14 +40,7 @@ class WalletPage extends ConsumerWidget {
               TotalCurrencyWallet(totalCryptoWalletAmount: cryptoWalletAmount),
               const SubtitleWalletPage(),
               const SizedBox(height: 60),
-              CryptoListView(
-                btcRealAmount: btcRealAmount,
-                btcAmount: btcAmount,
-                ethRealAmount: ethRealAmount,
-                ethAmount: ethAmount,
-                ltcRealAmount: ltcRealAmount,
-                ltcAmount: ltcAmount,
-              ),
+              CryptoListView(cryptoList: cryptoList),
             ],
           ),
         ),
