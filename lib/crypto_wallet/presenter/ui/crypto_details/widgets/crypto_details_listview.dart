@@ -31,7 +31,8 @@ class CryptoDetailsListView extends ConsumerWidget {
                 trailing: Text(
                   NumberFormat.simpleCurrency(locale: 'pt-BR', decimalDigits: 2)
                       .format(
-                    cryptoInfo.cryptoActualCurrencyPrice,
+                    cryptoInfo.cryptoHistoryPrice.values
+                        .toList()[chartIndexSelected],
                   ),
                 ),
               ),
