@@ -122,6 +122,54 @@ abstract class L10n {
   /// In pt, this message translates to:
   /// **'Movimentações'**
   String get secondIconTextBottomNavBar;
+
+  /// Texto do botão de conversão de moeda do arquivo crypto_details_conversion_button.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Converter Crypto'**
+  String get descriptionConversionButton;
+
+  /// Texto do primeiro botão do arquivo details_buttons_row.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Hoje'**
+  String get todayDetailsButtonsRow;
+
+  /// Title do segundo ListTile do arquivo details_buttons_row.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Preço monetário atual'**
+  String get actualPriceDetaislPage;
+
+  /// No description provided for @percentVariationDetaislPage.
+  ///
+  /// In pt, this message translates to:
+  /// **'Variação do período selecionado'**
+  String get percentVariationDetaislPage;
+
+  /// Title do terceiro ListTile do arquivo details_buttons_row.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Quantidade'**
+  String get userQuantityDetaislPage;
+
+  /// Title do quarto ListTile do arquivo details_buttons_row.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Valor'**
+  String get userCyrptoCurrencyValueAmountDetaislPage;
+
+  /// Subitulo da página que se encontra nno arquivo crypt_details_body.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Valor da moeda no período selecionado:'**
+  String get cryptoValueSelectedDay;
+
+  /// Texto contido no arquivo crypto_details_appbar.dart
+  ///
+  /// In pt, this message translates to:
+  /// **'Detalhes'**
+  String get textAppBarDetailsPage;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

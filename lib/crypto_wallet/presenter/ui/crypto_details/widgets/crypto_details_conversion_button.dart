@@ -1,3 +1,4 @@
+import 'package:cryptowallet/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CryptoDetailsConversionButton extends StatelessWidget {
@@ -14,7 +15,7 @@ class CryptoDetailsConversionButton extends StatelessWidget {
           backgroundColor: const Color.fromRGBO(224, 43, 87, 1),
         ),
         onPressed: () {},
-        child: const Text('Converter moeda'),
+        child: Text(L10n.of(context)!.descriptionConversionButton),
       ),
     );
   }

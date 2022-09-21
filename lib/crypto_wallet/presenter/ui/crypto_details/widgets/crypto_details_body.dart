@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../../l10n/l10n.dart';
 import '../../../../core/utils/text_styles.dart';
 import '../../../riverpod/providers.dart';
 import 'chart_details_page.dart';
@@ -35,8 +36,8 @@ class CryptoDetailsBody extends ConsumerWidget {
               style: cryptoDetailsAbbrevNameStyle,
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Valor da moeda no período selecionado:',
+            Text(
+              L10n.of(context)!.cryptoValueSelectedDay,
               style: cryptoSubtitleStyle,
             ),
             Text(

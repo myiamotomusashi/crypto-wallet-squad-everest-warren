@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../../l10n/l10n.dart';
 import '../../../riverpod/providers.dart';
 
 class CryptoDetailsListView extends ConsumerWidget {
@@ -26,7 +27,7 @@ class CryptoDetailsListView extends ConsumerWidget {
             Material(
               elevation: 5,
               child: ListTile(
-                title: const Text('Preço atual'),
+                title: Text(L10n.of(context)!.actualPriceDetaislPage),
                 trailing: Text(
                   NumberFormat.simpleCurrency(locale: 'pt-BR', decimalDigits: 2)
                       .format(
@@ -38,8 +39,8 @@ class CryptoDetailsListView extends ConsumerWidget {
             Material(
               elevation: 5,
               child: ListTile(
-                title: const Text(
-                  'Variação do período selecionado',
+                title: Text(
+                  L10n.of(context)!.percentVariationDetaislPage,
                 ),
                 trailing: Text(
                   '${(variationValue).toStringAsFixed(2)}%',
@@ -53,14 +54,15 @@ class CryptoDetailsListView extends ConsumerWidget {
             Material(
               elevation: 5,
               child: ListTile(
-                title: const Text('Quantidade'),
+                title: Text(L10n.of(context)!.userQuantityDetaislPage),
                 trailing: Text(cryptoInfo.cryptoUserAmount.toString()),
               ),
             ),
             Material(
               elevation: 5,
               child: ListTile(
-                title: const Text('Valor'),
+                title: Text(
+                    L10n.of(context)!.userCyrptoCurrencyValueAmountDetaislPage),
                 trailing: Text(
                   NumberFormat.simpleCurrency(locale: 'pt-BR', decimalDigits: 2)
                       .format(cryptoInfo.cryptoUserCurrencyAmount),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../../../l10n/l10n.dart';
 import '../../../riverpod/providers.dart';
 
 class DetailsButtonsRow extends ConsumerWidget {
@@ -15,16 +16,17 @@ class DetailsButtonsRow extends ConsumerWidget {
       children: [
         SizedBox(
           height: 50,
-          width: 60,
+          width: 80,
           child: MaterialButton(
             color: chartIndexSelected == 0 ? Colors.red : Colors.white,
             onPressed: () {
               ref.read(chartIndexSelectedProvider.notifier).state = 0;
             },
-            child: const Text(
-              'Hoje',
-              style: TextStyle(
-                fontSize: 13,
+            child: Text(
+              L10n.of(context)!.todayDetailsButtonsRow,
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),

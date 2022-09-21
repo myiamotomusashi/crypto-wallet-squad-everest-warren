@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../l10n/l10n.dart';
 import '../../../../core/utils/text_styles.dart';
 
 class CryptoDetailsAppBar extends StatelessWidget
@@ -14,8 +15,8 @@ class CryptoDetailsAppBar extends StatelessWidget
       backgroundColor: Colors.white,
       iconTheme: const IconThemeData(color: Colors.grey),
       elevation: 1,
-      title: const Text(
-        'Detalhes',
+      title: Text(
+        L10n.of(context)!.textAppBarDetailsPage,
         style: cryptoSubtitleStyle,
       ),
     );
