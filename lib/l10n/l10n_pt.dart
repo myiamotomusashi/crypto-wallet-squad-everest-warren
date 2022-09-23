@@ -18,4 +18,28 @@ class L10nPt extends L10n {
 
   @override
   String get secondIconTextBottomNavBar => 'Movimentações';
+
+  @override
+  String get descriptionConversionButton => 'Converter Crypto';
+
+  @override
+  String get todayDetailsButtonsRow => 'Hoje';
+
+  @override
+  String get actualPriceDetaislPage => 'Preço monetário atual';
+
+  @override
+  String get percentVariationDetaislPage => 'Variação do período selecionado';
+
+  @override
+  String get userQuantityDetaislPage => 'Quantidade';
+
+  @override
+  String get userCyrptoCurrencyValueAmountDetaislPage => 'Valor';
+
+  @override
+  String get cryptoValueSelectedDay => 'Valor da moeda no período selecionado:';
+
+  @override
+  String get textAppBarDetailsPage => 'Detalhes';
 }

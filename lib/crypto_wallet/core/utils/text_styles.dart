@@ -32,4 +32,11 @@ const titleTextStyle = TextStyle(
   color: Color.fromRGBO(224, 43, 87, 1),
 );
 
+const cryptoDetailsAbbrevNameStyle = TextStyle(
+  fontSize: 25,
+  fontFamily: 'Montserrat',
+  fontWeight: FontWeight.w600,
+  color: Color.fromARGB(153, 47, 46, 50),
+);
+
 const String hideCryptoAmount = "*****";
